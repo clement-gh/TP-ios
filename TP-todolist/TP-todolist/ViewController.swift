@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTask.count;
@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     }
     
     var myTask: [Task] = []
-  
+    var listCategory: Category?
     @IBAction func doneButton(_ sender: UISwitch) {
        
         let row = sender.tag
@@ -45,7 +45,9 @@ class ViewController: UIViewController,UITableViewDataSource {
             myTask.append(d)
             
         }
-        myTableView.dataSource = self
+        myTask = self.myTask.sorted(by:     {$0.dueDate  < $1.dueDate})
+        self.myTableView.delegate = self
+        self.myTableView.dataSource = self
      
     
     }
@@ -64,6 +66,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     @IBAction func cancel(_ unwindSegue: UIStoryboardSegue) {
         if let vc = unwindSegue.source as? AddViewController {
             vc.dismiss(animated: true, completion: nil)
+            
         }
     }
     @IBAction func save(_ unwindSegue: UIStoryboardSegue) {
@@ -72,7 +75,9 @@ class ViewController: UIViewController,UITableViewDataSource {
                 if !newName.text!.isEmpty {
                     let newTask = Task(_name: newName.text!, _description: newDesc.text!, _date: newDueDate.date)
                     myTask.append(newTask)
-                    myTableView.reloadData()
+                    self.myTableView.reloadData()
+                    listCategory?.taskList.append(newTask)
+                    myTask = self.myTask.sorted(by:     {$0.dueDate  < $1.dueDate})
                 }
                 
             }
@@ -85,6 +90,7 @@ class ViewController: UIViewController,UITableViewDataSource {
         let row = sender.tag
        myTask.remove(at: row)
        myTableView.reloadData()
+        
     }
 }
 

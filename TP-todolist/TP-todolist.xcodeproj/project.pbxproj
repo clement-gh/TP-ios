@@ -17,6 +17,8 @@
 		2E3CD7DB2918E6B60031460D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3CD7D92918E6B60031460D /* LaunchScreen.storyboard */; };
 		2E3CD7E42918E79C0031460D /* todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CD7E32918E79C0031460D /* todo.swift */; };
 		2E3CD7E72918F3850031460D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CD7E62918F3850031460D /* TableViewCell.swift */; };
+		974FDD6629704BFD0096395F /* category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FDD6529704BFD0096395F /* category.swift */; };
+		974FDD6929704F820096395F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FDD6829704F820096395F /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2E3CD7DC2918E6B60031460D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3CD7E32918E79C0031460D /* todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo.swift; sourceTree = "<group>"; };
 		2E3CD7E62918F3850031460D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		974FDD6529704BFD0096395F /* category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = category.swift; sourceTree = "<group>"; };
+		974FDD6829704F820096395F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				2E3CD7D02918E6B00031460D /* SceneDelegate.swift */,
 				2E3CD7D22918E6B00031460D /* ViewController.swift */,
 				2E3CD7D42918E6B00031460D /* Main.storyboard */,
+				974FDD6529704BFD0096395F /* category.swift */,
 				2E3CD7D72918E6B60031460D /* Assets.xcassets */,
 				2E3CD7D92918E6B60031460D /* LaunchScreen.storyboard */,
 				2E3CD7DC2918E6B60031460D /* Info.plist */,
@@ -75,6 +80,7 @@
 				2E3CD7E62918F3850031460D /* TableViewCell.swift */,
 				2E06501C293610C300EE5334 /* DataViewController.swift */,
 				2E06501F29361D5E00EE5334 /* AddViewController.swift */,
+				974FDD6829704F820096395F /* CategoryViewController.swift */,
 			);
 			path = "TP-todolist";
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 				2E3CD7D12918E6B00031460D /* SceneDelegate.swift in Sources */,
 				2E06501D293610C300EE5334 /* DataViewController.swift in Sources */,
 				2E3CD7E42918E79C0031460D /* todo.swift in Sources */,
+				974FDD6929704F820096395F /* CategoryViewController.swift in Sources */,
+				974FDD6629704BFD0096395F /* category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
